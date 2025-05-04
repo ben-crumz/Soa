@@ -57,9 +57,13 @@
 
             border-left: solid 1px black;
         }
-        .intro{
+
+        main{
+            max-width: 1200px;
+            margin: auto;
+        }
+        .introTitle{
             margin-top: 100px;
-            margin-left: 150px;
             margin-bottom: 100px;
 
             text-transform: uppercase;
@@ -75,6 +79,9 @@
         }
         .collectionCont > li{
             cursor: pointer;
+
+            font-family: sans-serif;
+            font-weight: 550;
         }
         .gallery-cont{
             display: flex;
@@ -85,10 +92,7 @@
             column-gap: 1.5em;
 
             padding-block: 1.5rem;
-            padding-inline: 1.5rem;
-
-            max-width: 1600px;
-            
+            padding-inline: 1.5rem; 
         }
         .main-gallery{
             width: 100%;
@@ -142,13 +146,13 @@
         </div>
     </header>
     <main>
-        <div class="intro">
+        <div class="introTitle">
             Explore...
         </div>
         <div class="selection-buttons">
             <ul class="collectionCont">
-                <li>Color</li>
-                <li>Black and White</li>
+                <li onclick="hideBNW()">Color</li>
+                <li onclick="hideColor()">Black and White</li>
             </ul>
         </div>
         <div class="gallery-cont">
@@ -166,7 +170,7 @@
                 <img src="main-images\Final Plane Photo.jpg" alt="" class="main-gallery" data-color="bnw">
     
                 <img src="main-images\Hope Plane.jpg" alt="" class="main-gallery" data-color="color">
-                <img src="main-images\Night Flowers_.jpg" alt="" class="main-gallery" data-color="bnw">
+                <img src="main-images\Night Flowers_.jpg" alt="" class="main-gallery" data-color="color">
                 <img src="main-images\Oil Drill.jpg" alt="" class="main-gallery" data-color="bnw">
     
                 <img src="main-images\SAD.jpg" alt="" class="main-gallery" data-color="color">
@@ -182,10 +186,53 @@
                 <img src="main-images\Workshop_.jpg" alt="" class="main-gallery" data-color="bnw">
                 
                 <img src="main-images\Yellow.jpg" alt="" class="main-gallery" data-color="color">
+                <img src="main-images\batch2\Beer.jpg" alt="" class="main-gallery" data-color="color">
+                <img src="main-images\batch2\Bomb.jpg" alt="" class="main-gallery" data-color="color">
+                <img src="main-images\batch2\Couple_.jpg" alt="" class="main-gallery" data-color="bnw">
+                <img src="main-images\batch2\crack head.jpg" alt="" class="main-gallery" data-color="color">
+                <img src="main-images\batch2\Lantern Walk.jpg" alt="" class="main-gallery" data-color="color">
+                <img src="main-images\batch2\Lanterns.jpg" alt="" class="main-gallery" data-color="color">
+                <img src="main-images\batch2\Little-Tokyo.jpg" alt="" class="main-gallery" data-color="color">
+                <img src="main-images\batch2\shadowed.jpg" alt="" class="main-gallery" data-color="bnw">
+                <img src="main-images\batch2\Shadows.jpg" alt="" class="main-gallery" data-color="bnw">
+                <img src="main-images\batch2\Sticker Sign.jpg" alt="" class="main-gallery" data-color="color">
+                <img src="main-images\batch2\Theater.jpg" alt="" class="main-gallery" data-color="color">
+                <img src="main-images\batch2\Yellow Coat.jpg" alt="" class="main-gallery" data-color="color">
             </div>
         </div>
     </main>
     <script>
+        // function hideBNW(){
+        //     const elements = document.querySelectorAll('[data-color="color"]');
+        //         elements.forEach(element => {
+        //             elements.style.display = 'none';
+        //     });
+        //     const color = document.querySelectorAll('[data-color="bnw"]');
+        //         color.forEach(element => {
+        //             color.style.display = 'block';
+        //     });
+        // }
+        function hideColor(){
+            const elements = document.querySelectorAll('[data-color="bnw"]');
+                elements.forEach(elements => {
+                    elements.style.display = 'block';
+            });
+            const color = document.querySelectorAll('[data-color="color"]');
+                color.forEach(color => {
+                    color.style.display = 'none';
+            });
+        }
+        function hideBNW(){
+            const elements = document.querySelectorAll('[data-color="color"]');
+                elements.forEach(elements => {
+                    elements.style.display = 'block';
+            });
+            const color = document.querySelectorAll('[data-color="bnw"]');
+                color.forEach(color => {
+                    color.style.display = 'none';
+            });
+        }
+
 
     </script>
 </body>
