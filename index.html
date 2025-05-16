@@ -1,4 +1,15 @@
+<!DOCTYPE html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Benjamin Crum">
+    <meta name="keywords" content="">
+    <title></title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" type="image/x-icon" href="">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="/main.js"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap" rel="stylesheet">
@@ -86,6 +97,8 @@
         .gallery-cont{
             display: flex;
             justify-content: center;
+
+            margin-inline: auto;
         }
         .grid{
             column-count: 3;
@@ -105,14 +118,14 @@
             display: none;
         }
 
-        @media (max-width: 810px){
+        @media only screen and (max-width: 810px){
             .grid{
-                column-count: 2;
+                column-count: 2 !important; 
             }
         }
-        @media (max-width: 400px){
+        @media screen and (max-width: 400px){
             .grid{
-                column-count: 1;
+                column-count: 1 !important; 
             }
         }
     </style>
@@ -212,16 +225,6 @@
         </div>
     </main>
     <script>
-        // function hideBNW(){
-        //     const elements = document.querySelectorAll('[data-color="color"]');
-        //         elements.forEach(element => {
-        //             elements.style.display = 'none';
-        //     });
-        //     const color = document.querySelectorAll('[data-color="bnw"]');
-        //         color.forEach(element => {
-        //             color.style.display = 'block';
-        //     });
-        // }
         function hideColor(){
             const elements = document.querySelectorAll('[data-color="bnw"]');
                 elements.forEach(elements => {
@@ -242,7 +245,6 @@
                     color.style.display = 'none';
             });
         }
-
-
     </script>
 </body>
+</html>
